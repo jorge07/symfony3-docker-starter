@@ -37,8 +37,8 @@ The leos/nginx-php7-composer:xdebug image contains ssh connection for php interp
     SSH pass: jarcodev
 
 Integration:
-    Add remote interpreter:
-        interpreter on /usr/local/bin/php
+
+    Add remote interpreter: interpreter on /usr/local/bin/php
 
     Add sftp mapping to /app
     
