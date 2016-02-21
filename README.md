@@ -42,6 +42,6 @@ Integration:
 
     Add sftp mapping to /app
     
-    To finish and a phpunit for the remote interpreter:
+    To finish add a phpunit for the remote interpreter:
         Autoload on /app/app/autoload.php
         Config on /app/phpunit.xml.dist
