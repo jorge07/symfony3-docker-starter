@@ -1,0 +1,35 @@
+version: '2'
+
+services:
+
+  shark:
+    build: etc/build/dev
+    container_name: symfony
+    ports:
+      - "80:80"
+      - "443:443"
+      - "9000:9000"
+      - "2222:22"
+    volumes:
+      - ./:/app
+      - ./var/logs/nginx:/var/log/nginx
+      - ~/.ssh:/root/ssh
+    links:
+      - redis
+
+  redis:
+    image: redis:3.0.7-alpine
+    container_name: symfony_redis
+    ports:
+      - 6379:6379
+
+  elk:
+    image: willdurand/elk
+    container_name: symfony_elk
+    ports:
+        - 81:80
+    volumes:
+        - ./etc/build/dev/elk/logstash:/etc/logstash
+        - ./etc/build/dev/elk/logstash/patterns:/opt/logstash/patterns
+    volumes_from:
+        - shark
