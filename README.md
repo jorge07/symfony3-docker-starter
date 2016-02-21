@@ -12,7 +12,7 @@ Symfony3 Docker starter
 
 ### Ready to start:
     
-    1- git clone https://github.com/jorge07/symfony3-docker-starter.git symfony/
+    1 - git clone https://github.com/jorge07/symfony3-docker-starter.git symfony/
     2 - Add symfony3.dev to /etc/hosts
     3 - cd /symfony && docker-compose up -d
     4 - Ready on symfony3.dev/app_dev.php and Kibana running on port 81
