@@ -1,0 +1,55 @@
+2016-02-27 17:52:53,373 CRIT Supervisor running as root (no user in config file)
+2016-02-27 17:52:53,378 INFO supervisord started with pid 1
+2016-02-27 17:52:54,381 INFO spawned: 'credentials' with pid 11
+2016-02-27 17:52:54,385 INFO spawned: 'sshd' with pid 12
+2016-02-27 17:52:54,387 INFO spawned: 'php' with pid 13
+2016-02-27 17:52:54,408 INFO exited: credentials (exit status 0; not expected)
+2016-02-27 17:52:55,420 INFO spawned: 'credentials' with pid 18
+2016-02-27 17:52:55,423 INFO success: sshd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-02-27 17:52:55,424 INFO success: php entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-02-27 17:52:55,500 INFO exited: credentials (exit status 0; not expected)
+2016-02-27 17:52:57,507 INFO spawned: 'credentials' with pid 21
+2016-02-27 17:52:57,556 INFO exited: credentials (exit status 0; not expected)
+2016-02-27 17:53:00,562 INFO spawned: 'credentials' with pid 24
+2016-02-27 17:53:00,608 INFO exited: credentials (exit status 0; not expected)
+2016-02-27 17:53:01,617 INFO gave up: credentials entered FATAL state, too many start retries too quickly
+2016-02-27 17:56:28,041 WARN received SIGTERM indicating exit request
+2016-02-27 17:56:28,043 INFO waiting for sshd, php to die
+2016-02-27 17:56:28,057 INFO stopped: php (exit status 0)
+2016-02-27 17:56:28,060 INFO stopped: sshd (exit status 0)
+2016-02-27 17:56:32,292 CRIT Supervisor running as root (no user in config file)
+2016-02-27 17:56:32,299 INFO supervisord started with pid 1
+2016-02-27 17:56:33,303 INFO spawned: 'credentials' with pid 11
+2016-02-27 17:56:33,305 INFO spawned: 'sshd' with pid 12
+2016-02-27 17:56:33,307 INFO spawned: 'php' with pid 13
+2016-02-27 17:56:33,328 INFO exited: credentials (exit status 0; not expected)
+2016-02-27 17:56:34,341 INFO spawned: 'credentials' with pid 18
+2016-02-27 17:56:34,342 INFO success: sshd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-02-27 17:56:34,343 INFO success: php entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-02-27 17:56:34,399 INFO exited: credentials (exit status 0; not expected)
+2016-02-27 17:56:36,404 INFO spawned: 'credentials' with pid 21
+2016-02-27 17:56:36,436 INFO exited: credentials (exit status 0; not expected)
+2016-02-27 17:56:39,442 INFO spawned: 'credentials' with pid 24
+2016-02-27 17:56:39,469 INFO exited: credentials (exit status 0; not expected)
+2016-02-27 17:56:40,471 INFO gave up: credentials entered FATAL state, too many start retries too quickly
+2016-02-27 18:02:35,578 WARN received SIGTERM indicating exit request
+2016-02-27 18:02:35,578 INFO waiting for sshd, php to die
+2016-02-27 18:02:35,585 INFO stopped: php (exit status 0)
+2016-02-27 18:02:35,586 INFO stopped: sshd (exit status 0)
+2016-02-27 18:03:33,340 CRIT Supervisor running as root (no user in config file)
+2016-02-27 18:03:33,345 INFO supervisord started with pid 1
+2016-02-27 18:03:34,347 INFO spawned: 'credentials' with pid 11
+2016-02-27 18:03:34,349 INFO spawned: 'sshd' with pid 12
+2016-02-27 18:03:34,351 INFO spawned: 'php' with pid 13
+2016-02-27 18:03:34,423 INFO exited: credentials (exit status 0; not expected)
+2016-02-27 18:03:35,426 INFO spawned: 'credentials' with pid 18
+2016-02-27 18:03:35,427 INFO success: sshd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-02-27 18:03:35,428 INFO success: php entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-02-27 18:03:35,446 INFO exited: credentials (exit status 0; not expected)
+2016-02-27 18:03:37,454 INFO spawned: 'credentials' with pid 21
+2016-02-27 18:03:37,505 INFO exited: credentials (exit status 0; not expected)
+2016-02-27 18:03:40,517 INFO spawned: 'credentials' with pid 24
+2016-02-27 18:03:40,569 INFO exited: credentials (exit status 0; not expected)
+2016-02-27 18:03:41,571 INFO gave up: credentials entered FATAL state, too many start retries too quickly
+2016-02-27 18:16:03,113 CRIT reaped unknown pid 163)
+2016-02-27 18:16:08,690 CRIT reaped unknown pid 170)

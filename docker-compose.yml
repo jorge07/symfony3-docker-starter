@@ -1,28 +1,44 @@
 version: '2'
 
 services:
-
-  shark:
-    build: etc/build/dev
-    container_name: symfony
-    ports:
-      - "80:80"
-      - "443:443"
-      - "9000:9000"
-      - "2222:22"
+  code:
+    build: etc/build/dev/code
+    container_name: symfony_code
     volumes:
       - ./:/app
-      - ./var/logs/nginx:/var/log/nginx
-      - ~/.ssh:/root/ssh
+
+  nginx:
+    build: etc/build/dev/nginx
+    container_name: symfony_nginx
+    ports:
+      - "80:80"
     links:
+      - php
+    volumes_from:
+        - code
+    volumes:
+      - ./var/logs/nginx:/var/log/nginx
+
+  php:
+    build: etc/build/dev/php7
+    container_name: symfony_php
+    volumes:
+        - ~/.ssh:/root/ssh
+    volumes_from:
+        - code
+    ports:
+      - "9000:9000"
+      - "2222:22"
+    working_dir: /app
+    links:
+      - code
       - redis
 
   redis:
     image: redis:3.0.7-alpine
-    container_name: symfony_redis
     ports:
       - 6379:6379
-
+    container_name: symfony_redis
   elk:
     image: willdurand/elk
     container_name: symfony_elk
@@ -32,4 +48,5 @@ services:
         - ./etc/build/dev/elk/logstash:/etc/logstash
         - ./etc/build/dev/elk/logstash/patterns:/opt/logstash/patterns
     volumes_from:
-        - shark
+        - code
+        - nginx
