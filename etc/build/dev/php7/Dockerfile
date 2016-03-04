@@ -23,7 +23,10 @@ COPY supervisor/supervisor.conf /etc/supervisor/conf.d/supervisord.conf
 COPY ssh/credentials.sh /root/
 RUN chmod 755 /root/credentials.sh
 
-COPY php.ini /usr/local/etc/php/php.ini
+COPY php.ini /tmp/php.ini_extension
+RUN cat /tmp/php.ini_extension >> /usr/local/etc/php/php.ini \
+    && rm /tmp/php.ini_extension
+
 COPY php-fpm.conf /usr/local/etc/php-fpm.conf
 
 RUN useradd -ms /bin/bash jarco
