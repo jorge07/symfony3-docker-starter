@@ -29,7 +29,6 @@ services:
     ports:
       - "9000:9000"
       - "2222:22"
-    working_dir: /app
     links:
       - code
       - redis
@@ -39,6 +38,7 @@ services:
     ports:
       - 6379:6379
     container_name: symfony_redis
+
   elk:
     image: willdurand/elk
     container_name: symfony_elk
@@ -49,4 +49,3 @@ services:
         - ./etc/build/dev/elk/logstash/patterns:/opt/logstash/patterns
     volumes_from:
         - code
-        - nginx
