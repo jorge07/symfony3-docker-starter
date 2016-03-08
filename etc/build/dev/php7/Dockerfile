@@ -41,4 +41,6 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
 
+RUN echo "xdebug.cli_color=1\nxdebug.remote_autostart=1\nxdebug.remote_connect_back=1" > /usr/local/etc/php/conf.d/xdebug.ini
+
 WORKDIR /app
