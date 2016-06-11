@@ -38,9 +38,7 @@
         "white-october/pagerfanta-bundle": "^1.0",
 
         "snc/redis-bundle": "2.x-dev",
-        "predis/predis": "^1.0",
-
-        "lexik/jwt-authentication-bundle": "~1.4",
+        "predis/predis": "^1.0"
 
     },
     "require-dev": {
