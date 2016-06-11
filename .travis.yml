@@ -8,4 +8,4 @@ script:
   - ls -lah
   - docker-compose up -d
   - docker exec -it symfony_php composer install
-  - docker exec -it symfony_php
+  - docker exec -it symfony_php vendor/bin/phpunit
