@@ -7,7 +7,7 @@ Symfony3 Docker starter
     ELK on port 81 with nginx and symfony logs
     Redis image
     Nginx 1.9.1
-    PHP 7.0.3
+    PHP 7.0.7
     A Symfony3 empty with few very useful packages
     
 ### About ssh keys
