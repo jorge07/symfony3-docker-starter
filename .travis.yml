@@ -4,5 +4,5 @@ services:
   - docker
 
 script:
-  - docker run -it jorge07/php7-xdebug-ssh composer install -n
-  - docker run -it jorge07/php7-xdebug-ssh vendor/bin/phpunit
+  - docker run -it -v $PWD:/app jorge07/php7-xdebug-ssh composer install -n
+  - docker run -it -v $PWD:/app jorge07/php7-xdebug-ssh vendor/bin/phpunit
