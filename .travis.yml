@@ -1,0 +1,8 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker run -it -v $PWD:/app jorge07/php7-xdebug-ssh composer install -n
+  - docker run -it -v $PWD:/app jorge07/php7-xdebug-ssh vendor/bin/phpunit

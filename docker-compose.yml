@@ -20,7 +20,7 @@ services:
       - ./var/logs/nginx:/var/log/nginx
 
   php:
-    build: etc/build/dev/php7
+    image: jorge07/php7-xdebug-ssh
     container_name: symfony_php
     volumes:
         - ~/.ssh:/root/ssh
