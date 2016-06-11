@@ -18,11 +18,11 @@ Ssh keys are shared with docker container so you must by available to run compos
 
 ### Ready to start:
     
-1 - git clone https://github.com/jorge07/symfony3-docker-starter.git symfony/
-2 - Add symfony.dev to /etc/hosts
-3 - cd /symfony && docker-compose up -d
-4 - run composer (Explanation above)
-5 - Ready on symfony.dev/app_dev.php and Kibana running on port 81
+    1 - git clone https://github.com/jorge07/symfony3-docker-starter.git symfony/
+    2 - Add symfony.dev to /etc/hosts
+    3 - cd /symfony && docker-compose up -d
+    4 - run composer (Explanation above)
+    5 - Ready on symfony.dev/app_dev.php and Kibana running on port 81
     
 
 ### About docker image integration on PHPStorm
