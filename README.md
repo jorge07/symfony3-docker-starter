@@ -1,8 +1,6 @@
 Symfony3 Docker starter
 ===========
-[![Code Climate](https://codeclimate.com/github/jorge07/symfony3-docker-starter/badges/gpa.svg)](https://codeclimate.com/github/jorge07/symfony3-docker-starter)
-
-[![Build Status](https://travis-ci.org/jorge07/symfony3-docker-starter.svg?branch=master)](https://travis-ci.org/jorge07/symfony3-docker-starter)
+[![Code Climate](https://codeclimate.com/github/jorge07/symfony3-docker-starter/badges/gpa.svg)](https://codeclimate.com/github/jorge07/symfony3-docker-starter) [![Build Status](https://travis-ci.org/jorge07/symfony3-docker-starter.svg?branch=master)](https://travis-ci.org/jorge07/symfony3-docker-starter)
 
 ### Includes
     
