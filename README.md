@@ -29,11 +29,11 @@ Ssh keys are shared with docker container so you must by available to run compos
 
 SSH settings    
   - user: root
-  - pass: jarcodev 
+  - pass: lbmonkey
 
 Integration:
 
-    Add remote interpreter: binary on /usr/local/bin/php
+    Add remote php interpreter with the credentials 
 
     Add sftp mapping to /app
     
