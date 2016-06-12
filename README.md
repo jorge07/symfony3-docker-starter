@@ -29,7 +29,7 @@ Ssh keys are shared with docker container so you must by available to run compos
 
 SSH settings    
   - user: root
-  - pass: jarco
+  - pass: jarcodev 
 
 Integration:
 
