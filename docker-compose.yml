@@ -1,51 +1,36 @@
 version: '2'
-
 services:
-  code:
-    build: etc/build/dev/code
-    container_name: symfony_code
-    volumes:
-      - ./:/app
-
   nginx:
-    build: etc/build/dev/nginx
+    image: nginx:latest
     container_name: symfony_nginx
     ports:
       - "80:80"
-    links:
-      - php
     volumes_from:
-        - code
+      - php
     volumes:
+      - ./etc/build/dev/nginx/conf.d:/etc/nginx/conf.d
       - ./var/logs/nginx:/var/log/nginx
 
   php:
-    image: jorge07/php7-xdebug-ssh
+    image: letsbonus/php-dev:7.0
     container_name: symfony_php
     volumes:
-        - ~/.ssh:/root/ssh
-    volumes_from:
-        - code
+      - ./:/app
     ports:
-      - "9000:9000"
       - "2222:22"
-    links:
-      - code
-      - redis
+    working_dir: /app
 
   redis:
     image: redis:3.0.7-alpine
-    ports:
-      - 6379:6379
     container_name: symfony_redis
 
   elk:
     image: willdurand/elk
     container_name: symfony_elk
     ports:
-        - 81:80
+        - "81:80"
     volumes:
         - ./etc/build/dev/elk/logstash:/etc/logstash
         - ./etc/build/dev/elk/logstash/patterns:/opt/logstash/patterns
     volumes_from:
-        - code
+        - php
